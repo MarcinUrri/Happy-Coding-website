@@ -6,7 +6,8 @@ $(document).ready(function(){
     dotsEach:true,
     autoplay:true,
     autoplayTimeout: 3000,
-    items:1
+    items:1,
+    autoplayHoverPause:true;
 })
 
 $('.owl-two').owlCarousel({
@@ -14,6 +15,7 @@ $('.owl-two').owlCarousel({
   dots: false,
   autoplay:true,
   autoplayTimeout: 30000,
+  autoplayHoverPause:true,
   items:1,
 })
 

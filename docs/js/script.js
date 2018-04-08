@@ -7,6 +7,8 @@ $(document).ready(function(){
     autoplay:true,
     autoplayTimeout: 3000,
     autoplayHoverPause:true,
+    mouseDrag: false,
+    touchDrag: true,
     items:1
 })
 
@@ -16,6 +18,8 @@ $('.owl-two').owlCarousel({
   autoplay:true,
   autoplayTimeout: 3000,
   autoplayHoverPause:true,
+  mouseDrag: false,
+   touchDrag: true,
   items:1,
 })
 

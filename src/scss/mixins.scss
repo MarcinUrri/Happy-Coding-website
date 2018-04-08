@@ -1,0 +1,66 @@
+@mixin spacing-content {
+  margin: 2rem 0;
+}
+@mixin flex-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@mixin flex-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@mixin section-header {
+  font-size: 3rem;
+  font-weight: normal;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    margin-left: -2.5rem;
+    width: 5rem;
+    height: 0.4rem;
+    background-color:$main-orange;
+
+  }
+}
+@mixin main-btn {
+  width: 8rem;
+  height: 3rem;
+  text-transform: uppercase;
+  background-color: #fff;
+  font-weight: bold;
+  outline: none;
+  color: #fff;
+  background-color: $main-orange;
+  border: none;
+  border-radius:0.2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+@mixin round-btn {
+  border: none;
+  background-color: #fff;
+  border-radius: 3rem;
+  width: 10rem;
+  color:#222;
+}

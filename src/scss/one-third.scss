@@ -1,0 +1,75 @@
+@import "mixins";
+@import "variables";
+
+.one-third-section{
+  margin-top: 5rem;
+  @include flex-horizontal;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  .one-third{
+    @include flex-vertical;
+    .one-third-upper{
+      background-color: $main-orange;
+      padding:3rem;
+      color: #fff;
+      height: 25rem;
+      h3{
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 2rem 0;
+      }
+      p{
+        text-align: left;
+        line-height: 1.5rem;
+      }
+      .round-btn{
+        margin-top: 3rem;
+      }
+    }
+    .upper-img{
+      padding: 0;
+      background: none;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .upper-black{
+      background-color: #222;
+      color: $light-grey-font;
+    }
+    .one-third-down{
+      background: #f4f4f4;
+      padding: 2rem;
+      h3{
+        font-size: 1.5rem;
+      }
+      p{
+        margin: 2rem 0;
+        line-height:1.5rem;
+      }
+    }
+    .middle-down{
+      background-color: #eaeaea;
+    }
+  }
+}
+
+//  media queries
+
+@media screen and (max-width: 768px) {
+  .one-third-section{
+    @include flex-vertical;
+    .one-third{
+      width: 100%;
+      .one-third-upper{
+        width: 100%;
+        height: auto;
+      }
+      .one-third-down{
+        height: auto;
+      }
+    }
+  }
+}

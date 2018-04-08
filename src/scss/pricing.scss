@@ -1,0 +1,87 @@
+@import "mixins";
+@import "variables";
+
+
+.pricing-section{
+  @include flex-vertical;
+  margin-bottom: 5rem;
+}
+.pricin-parts{
+  @include flex-horizontal;
+  margin-top: 5rem;
+  width: 100%;
+  .pricing-part{
+    padding: 0 1rem;
+    text-align: center;
+    width: 20rem;
+    .pricing-part-upper{
+      background-color: $grey-backround;
+      color: #fff;
+      p{
+        font-size: 0.8rem;
+        padding: 0.3rem 0 1rem 0;
+        &:nth-child(1){
+          padding: 1rem 0;
+          font-size: 1.5rem;
+        }
+      }
+      span{
+        font-size: 1.5rem;
+      }
+    }
+    .upper-orange{
+      background-color: $main-orange;
+    }
+    .pricing-list{
+      li{
+        padding: 1rem 0;
+        color: $grey-font;
+        border-top: 1px solid #eee;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        .main-btn{
+          outline: none;
+          border-radius: 0.3rem;
+          border:none;
+          background-color: $grey-backround;
+          cursor: pointer;
+          color: #fff;
+          width: 5rem;
+          font-weight: normal;
+          height: 2.5rem;
+        }
+        .orange-btn{
+          background-color: $main-orange;
+        }
+      &:nth-child(odd){
+        background-color: #f9f9f9;
+      }
+      &:last-child{
+        border-bottom: 1px solid #eee;
+      }
+      }
+    }
+    &:hover{
+      margin-top: -1rem;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+    &:not( :hover ){
+      margin-top: 0;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+  }
+}
+
+// media queries
+
+@media screen and (max-width:768px) {
+  .pricin-parts{
+    @include flex-vertical;
+    .pricing-part{
+      width: 90%;
+      padding-bottom: 4rem;
+    }
+  }
+}

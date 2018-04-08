@@ -1,0 +1,61 @@
+@import "mixins";
+@import "variables";
+
+.social-section{
+  margin: 5rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/img/people-paralax.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/people-paralax.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 30rem;
+  @include flex-horizontal;
+  .social-parts{
+    @include flex-horizontal;
+    width: 100%;
+    font-size: 3rem;
+    color: #fff;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+    .social-icon{
+      background-color:rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// media queries
+
+
+@media screen and (max-width:768px) {
+  .social-section{
+    height: 40rem;
+    .social-parts{
+      @include flex-vertical;
+      font-size: 2rem;
+      .social-content{
+        margin: 1rem 0;
+        .social-icon{
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
+        p{
+          font-size: 1.2rem;
+          padding-top: 0.2rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "mixins";
+@import "variables";
+
+.portfolio-section{
+  @include flex-vertical;
+  margin: 5rem 0;
+  .portfolio-images{
+    @include flex-horizontal;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 5rem;
+    .container{
+      width: 50%;
+      position: relative;
+      img{
+        width: 100%;
+        display: block;
+      }
+      .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        -webkit-transition: .5s ease;
+        transition: .5s ease;
+        background-color: $main-orange;
+        .text{
+          color: white;
+          font-size: 1rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+          p{
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+            color: $light-grey-font;
+          }
+        }
+      }
+      &:hover .overlay{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// media queries
+@media screen and (max-width:768px) {
+  .portfolio-section{
+    .portfolio-images{
+      @include flex-vertical;
+      width: 100%;
+      .container{
+        width: 100%;
+      }
+    }
+  }
+}

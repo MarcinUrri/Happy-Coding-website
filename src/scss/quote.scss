@@ -1,0 +1,46 @@
+@import "mixins";
+@import "variables";
+
+.quote-section{
+  margin: 5rem 0;
+  .quote-slider{
+    width: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 0 auto;
+    font-style: italic;
+    font-family: Georgia;
+    blockquote{
+      margin-bottom: 2rem;
+      .fa-quote-right{
+        padding-right: 1rem;
+      }
+    }
+    span{
+      color: $grey-font;
+      font-size: 1.3rem;
+    }
+    img{
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+  }
+}
+
+//  media queries
+
+@media screen and (max-width:768px) {
+  .quote-section{
+    .quote-slider{
+          width: 80%;
+          font-size: 1rem;
+      blockquote{
+        font-size: 1rem;
+      }
+    }
+  }
+}

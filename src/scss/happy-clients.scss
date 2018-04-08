@@ -1,0 +1,61 @@
+@import "mixins";
+@import "variables";
+
+.numbers-section{
+  background-image: url(/img/girl-paralax.jpg);
+  background-repeat: no-repeat;
+   background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 30rem;
+  @include flex-horizontal;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  .numbers-part{
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    .number-icon{
+      background-color:rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      width: 3rem;
+      border-radius: 50%;
+      font-size: 3rem;
+    }
+    h2{
+      font-weight: normal
+    }
+    p{
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+}
+
+// media queries
+
+@media screen and (max-width:768px) {
+  .numbers-section{
+    .numbers-part{
+      font-size: 3rem;
+      .number-icon{
+        font-size: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width:420px) {
+  .numbers-section{
+    @include flex-vertical;
+    height: 40rem;
+    .numbers-part{
+      font-size: 2rem;
+      .number-icon{
+        padding: 1rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

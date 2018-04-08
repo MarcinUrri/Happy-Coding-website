@@ -1,0 +1,61 @@
+@import "mixins";
+@import "variables";
+
+.contact-us-section{
+  @include flex-vertical;
+  .section-header{
+    margin-bottom: 2rem;
+  }
+  p{
+    color: $font-color;
+    margin-bottom: 5rem;
+  }
+  .contact-us-form{
+    @include flex-horizontal;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    input[type=text],input[type=email]{
+      width: 49%;
+      -webkit-box-sizing: border-box;
+      height: 3rem;
+      padding-left: 1rem;
+      color: $font-color;
+              box-sizing: border-box
+    }
+    input[type=textarea]{
+      margin-top: 1rem;
+      color: $font-color;
+      height: 10rem;
+      width: 100%;padding-left: 1rem;
+    }
+    input[type=submit]{
+      margin-right: auto;
+      margin-top: 1rem;
+      width: 10rem;
+    }
+  }
+}
+
+// media queries
+
+@media screen and (max-width:768px) {
+  .contact-us-section{
+    p{
+      width: 90%;
+    }
+    .contact-us-form{
+      width: 90%;
+       @include flex-vertical;
+     input[type=text],input[type=email]{
+       width: 100%;
+       margin-bottom: 1rem;
+     }
+     input[type=submit]{
+       width: 100%;
+     }
+    }
+  }
+}

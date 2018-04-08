@@ -1,0 +1,50 @@
+@import "mixins";
+@import "variables";
+
+.services-section{
+  @include flex-vertical;
+  h2{
+    @include spacing-content;
+  }
+}
+.services-parts{
+  @include flex-horizontal;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  .service-part{
+    padding: 2rem;
+    width: 33.33%;
+    color: #7f7f7f;
+    @include flex-vertical;
+    text-align: center;
+    .service-icon{
+      background-color: $main-orange;
+      color: #fff;
+      font-size: 2rem;
+      padding: 1.5rem;
+      border-radius: 50%;
+    }
+    .service-icon-black{
+      background-color:$grey-backround;
+    }
+    h4{
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+    p{
+      line-height: 1.5rem;
+    }
+  }
+}
+
+//  media queries
+
+@media screen and (max-width:768px) {
+  .services-parts{
+    @include flex-vertical;
+    .service-part{
+      width: 100%;
+    }
+  }
+}
